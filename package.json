@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pkg": "pkg dist/app.js --out-path package/ --debug",
     "build": "tsc",
     "dev": "ts-node ./lib/server.ts",
     "start": "nodemon ./dist/server.js",
@@ -18,5 +19,14 @@
     "mongoose": "^5.4.6",
     "nodemon": "^1.18.9",
     "typescript": "^3.2.4"
+  },
+  "pkg": {
+    "assets": [
+      "dist/**/*"
+    ],
+    "scripts":"dist/**/*.js"
+  },
+  "devDependencies": {
+    "pkg":"*"
   }
 }

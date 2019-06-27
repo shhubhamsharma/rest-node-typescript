@@ -25,4 +25,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'dist/*.js', fingerprint: true
+        }
+    }
 }

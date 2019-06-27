@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'npm run prod'
+                bat 'npm run build'
             }
         }
         stage('Test') {

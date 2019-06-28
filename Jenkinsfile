@@ -4,7 +4,7 @@ pipeline {
             EMAIL_TO = 'shubham.ks494@gmail.com'
     }
     triggers {
-        cron('* * * * *')
+        cron('1 * * * *')
     }
     stages {
         stage('PreBuild') {

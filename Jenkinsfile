@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    notifyBuild('STARTED')
+    try{
     environment {
             EMAIL_TO = 'shubham.ks494@gmail.com'
     }
@@ -54,5 +56,10 @@ pipeline {
              echo 'This will run only if the state of the Pipeline has changed'  
              echo 'For example, if the Pipeline was previously failing but is now successful'  
          }  
-     }  
+     } 
+     }
+     catch (err){
+         echo "Caught ${err}"
+     }
+     notify("Done")
 }

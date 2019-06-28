@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    notifyBuild('STARTED')
+    notify('STARTED')
     try{
     environment {
             EMAIL_TO = 'shubham.ks494@gmail.com'
